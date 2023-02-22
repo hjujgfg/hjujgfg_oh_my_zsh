@@ -30,6 +30,14 @@ err_username() {
    echo "$(arrow_start) %n $(arrow_end)"
 }
 
+local_prefix() {
+   ARROW_FG="232"
+   ARROW_BG="158"
+   NEXT_ARROW_BG="183"
+   NEXT_ARROW_FG="160"
+   echo "$(arrow_start) LOCAL $(arrow_end)"
+}
+
 # return err_username if there are errors, ok_username otherwise
 username() {
    echo "%(?.$(ok_username).$(err_username))"
@@ -76,6 +84,6 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[white]%} ✱%{$reset_color%}"
 
 
 
-PROMPT='$(username)$(directory)$(git_prompt)
+PROMPT='$(local_prefix)$(username)$(directory)$(git_prompt)
 $(prompt_indicator) '
 RPROMPT='$(git_prompt_status) $(current_time)'
