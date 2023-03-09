@@ -15,26 +15,26 @@ arrow_end() {
 }
 
 local_prefix() {
-   ARROW_FG="232"
-   ARROW_BG="086"
-   NEXT_ARROW_FG="232"
-   NEXT_ARROW_BG="086"
+   ARROW_FG="226"
+   ARROW_BG=""
+   NEXT_ARROW_FG="226"
+   NEXT_ARROW_BG=""
    echo "$(arrow_start) LOCAL $(arrow_end)"
 }
 
 ok_username() {
-   ARROW_FG="016"
-   ARROW_BG="051"
-   NEXT_ARROW_FG="232"
-   NEXT_ARROW_BG="051"
+   ARROW_FG="051"
+   ARROW_BG=""
+   NEXT_ARROW_FG="051"
+   NEXT_ARROW_BG=""
    echo "$(arrow_start) %n $(arrow_end)"
 }
 
 err_username() {
-   ARROW_FG="016"
-   ARROW_BG="160"
-   NEXT_ARROW_FG="232"
-   NEXT_ARROW_BG="160"
+   ARROW_FG="160"
+   ARROW_BG=""
+   NEXT_ARROW_FG="160"
+   NEXT_ARROW_BG=""
    echo "$(arrow_start) %n $(arrow_end)"
 }
 
@@ -44,10 +44,10 @@ username() {
 }
 
 directory() {
-   ARROW_FG="016"
-   ARROW_BG="121"
-   NEXT_ARROW_FG="232"
-   NEXT_ARROW_BG="121"
+   ARROW_FG="121"
+   ARROW_BG=""
+   NEXT_ARROW_FG="121"
+   NEXT_ARROW_BG=""
    echo "$(arrow_start) %~ $(arrow_end)"
 }
 
@@ -56,10 +56,10 @@ current_time() {
 }
 
 git_prompt() {
-   ARROW_FG="016"
-   ARROW_BG="152"
-   NEXT_ARROW_BG=""
+   ARROW_FG="152"
+   ARROW_BG=""
    NEXT_ARROW_FG="159"
+   NEXT_ARROW_BG=""
    echo "$(arrow_start) $(git_prompt_info) $(arrow_end)"
 }
 
